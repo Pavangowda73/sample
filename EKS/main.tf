@@ -91,7 +91,7 @@ resource "aws_eks_cluster" "cluster"{
     role_arn = aws_iam_role.cluster-role.arn 
     vpc_config {
       subnet_ids = aws_subnet.subnets[*].id 
-      security_group_ids = [aws_security_group.clsuter-sg.id]
+      security_group_ids = [aws_security_group.cluster-sg.id]
     }
 }
 
